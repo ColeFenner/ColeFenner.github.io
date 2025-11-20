@@ -2470,6 +2470,25 @@ input, select, textarea {
 		border-radius: inherit;
 	}
 
+	.image-group img {
+		display: block;
+		width: 100%;
+		height: auto;
+		border-radius: 0 !important; /* remove internal rounding */
+	}
+
+	/* Only apply rounding to the *outer* wrapper */
+	.image-group {
+		overflow: hidden;            /* ensures clean edges */
+		border-radius: 0.5em;        /* match your theme's rounding */
+	}
+
+	.image-group img:first-child {
+		margin-bottom: .25em;        /* space between images, optional */
+	}
+
+
+
 /* List */
 
 	ol {
